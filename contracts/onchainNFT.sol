@@ -21,7 +21,10 @@ contract onchainNFT is ERC721URIStorage, Ownable {
         uint256 tokenId
     ) public pure override returns (string memory) {
         string
-            memory svg = "<svg xmlns='http://www.w3.org/2000/svg' width='200' height='100'><rect width='200' height='100' fill='black'/><text x='50%' y='50%' font-family='Arial' font-size='24' fill='lime' text-anchor='middle' alignment-baseline='middle'>DripNFT</text></svg>";
+            memory svg = "<svg xmlns='http://www.w3.org/2000/svg' width='500' height='500'>"
+            "<rect width='500' height='500' fill='linear-gradient(135deg, #ff9a9e, #fad0c4)'/>"
+            "<text x='50%' y='50%' font-family='Arial' font-size='48' fill='white' font-weight='bold' text-anchor='middle' alignment-baseline='middle'>DripNFT</text>"
+            "</svg>";
 
         string memory imageURI = string(
             abi.encodePacked(
